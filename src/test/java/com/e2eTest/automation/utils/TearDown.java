@@ -18,12 +18,12 @@ public class TearDown {
 	public void quitDriver(Scenario scenario) {
 
 		if (scenario.isFailed()) {
-			final byte[] screenShot = ((TakesScreenshot) SetUp.getDriver()).getScreenshotAs(OutputType.BYTES);
+			final byte[] screenShot = ((TakesScreenshot) Setup.getDriver()).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenShot, "image/png", "Screenshot: " + scenario.getName());
 		}
 
-		SetUp.getDriver().quit();
-		SetUp.getLogger().info("Scenario: " + scenario.getName() + " - finished.Status: " + scenario.getStatus());
+		Setup.getDriver().quit();
+		Setup.getLogger().info("Scenario: " + scenario.getName() + " - finished.Status: " + scenario.getStatus());
 
 	}
 

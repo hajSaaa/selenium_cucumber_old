@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import com.e2eTest.automation.utils.BasePage;
-import com.e2eTest.automation.utils.SetUp;
+import com.e2eTest.automation.utils.Setup;
 
 public class AuthentificationPage extends BasePage {
 
@@ -20,7 +20,7 @@ public class AuthentificationPage extends BasePage {
 	private static WebElement btnLogin;
 
 	public AuthentificationPage() {
-		super(SetUp.getDriver());
+		super(Setup.getDriver());
 	}
 
 	public static WebElement getEmail() {
