@@ -14,7 +14,7 @@ public class TearDown {
 	 * 
 	 * @After Methods annotated with @After execute after every scenario.
 	 */
-	@After
+	//@After
 	public void quitDriver(Scenario scenario) {
 
 		if (scenario.isFailed()) {
